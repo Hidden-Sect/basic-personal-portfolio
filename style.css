@@ -2,17 +2,18 @@
    CSS Variables (Design Tokens)
    =================================== */
 :root {
-  /* Light Theme Colors */
-  --color-primary: #6366f1;
-  --color-primary-dark: #4f46e5;
-  --color-primary-light: #818cf8;
-  --color-text: #1f2937;
-  --color-text-light: #6b7280;
-  --color-background: #ffffff;
-  --color-background-alt: #f9fafb;
-  --color-border: #e5e7eb;
-  --color-accent: #6366f1;
+  /* Dark Theme Colors */
+  --color-primary: #818cf8;
+  --color-primary-dark: #6366f1;
+  --color-primary-light: #a5b4fc;
+  --color-text: #f3f4f6;
+  --color-text-light: #d1d5db;
+  --color-background: #111827;
+  --color-background-alt: #1f2937;
+  --color-border: #374151;
+  --color-accent: #818cf8;
   --color-success: #10b981;
+  --color-on-primary: #ffffff; /* text color for elements on primary backgrounds */
 
   /* Spacing (8px scale) */
   --space-xs: 8px;
@@ -119,7 +120,7 @@ ul {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(17, 24, 39, 0.95);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
@@ -189,7 +190,7 @@ ul {
   justify-content: center;
   text-align: center;
   padding-top: var(--space-2xl);
-  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
   position: relative;
   overflow: hidden;
   /* Added theme-aware gradient background */
@@ -291,7 +292,7 @@ ul {
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: var(--color-background);
+  color: var(--color-on-primary);
 }
 
 .btn-primary:hover {
@@ -312,7 +313,7 @@ ul {
 
 .btn-secondary:hover {
   background-color: var(--color-primary);
-  color: var(--color-background);
+  color: var(--color-on-primary);
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
 }
 
@@ -371,7 +372,7 @@ ul {
   display: flex;
   gap: var(--space-sm);
   padding: var(--space-md);
-  background: linear-gradient(135deg, var(--color-background-alt) 0%, #ffffff 100%);
+  background: linear-gradient(135deg, var(--color-background-alt) 0%, var(--color-background) 100%);
   border-radius: var(--border-radius);
   border-left: 4px solid var(--color-primary);
   transition: var(--transition);
@@ -452,7 +453,7 @@ ul {
 }
 
 .skill-item:hover .skill-icon svg {
-  color: var(--color-background);
+  color: var(--color-on-primary);
 }
 
 .skill-icon img {
@@ -751,7 +752,7 @@ ul {
 
 .social-link:hover {
   background-color: var(--color-primary);
-  color: var(--color-background);
+  color: var(--color-on-primary);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
   border-color: var(--color-primary);
@@ -766,8 +767,8 @@ ul {
    Footer
    =================================== */
 .footer {
-  background: linear-gradient(135deg, var(--color-text) 0%, #111827 100%);
-  color: var(--color-background);
+  background: linear-gradient(135deg, #0b1220 0%, #111827 100%);
+  color: var(--color-text);
   padding: var(--space-xl) 0 var(--space-md);
   text-align: center;
   position: relative;
@@ -784,7 +785,7 @@ ul {
 }
 
 .footer-content p {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-text-light);
   font-size: var(--font-size-sm);
 }
 
@@ -799,7 +800,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-background);
+  color: var(--color-on-primary);
   transition: var(--transition);
   box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
 }
