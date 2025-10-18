@@ -1,1 +1,1 @@
-v1.0 Dark theme
+v1.0 Light theme
