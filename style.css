@@ -39,8 +39,8 @@
   --transition: all 0.3s ease;
 }
 
-/* Added CSS custom properties for theme switching via checkbox */
-html[data-theme="dark"] {
+/* Use :has() selector to apply dark theme when checkbox is checked */
+html:has(#theme-toggle:checked) {
   --color-primary: #818cf8;
   --color-primary-dark: #6366f1;
   --color-primary-light: #a5b4fc;
@@ -298,6 +298,10 @@ html[data-theme="dark"] .navbar {
   }
 }
 
+html:has(#theme-toggle:checked) .hero {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
 .hero::before {
   content: "";
   position: absolute;
@@ -483,6 +487,10 @@ html[data-theme="dark"] .navbar {
   .detail-item {
     background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
   }
+}
+
+html:has(#theme-toggle:checked) .detail-item {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
 }
 
 .detail-item:hover {
@@ -883,6 +891,10 @@ html[data-theme="dark"] .navbar {
   .footer {
     background: linear-gradient(135deg, #1f2937 0%, #0f172a 100%);
   }
+}
+
+html:has(#theme-toggle:checked) .footer {
+  background: linear-gradient(135deg, #1f2937 0%, #0f172a 100%);
 }
 
 .footer-content {
