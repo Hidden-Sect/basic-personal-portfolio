@@ -356,6 +356,13 @@ ul {
     transition: width 1s ease;
 }
 
+/* Width utilities for skill progress bars (avoid inline styles) */
+.skill-progress.w-70 { width: 70%; }
+.skill-progress.w-75 { width: 75%; }
+.skill-progress.w-80 { width: 80%; }
+.skill-progress.w-85 { width: 85%; }
+.skill-progress.w-90 { width: 90%; }
+
 /* ===================================
    Portfolio Section
    =================================== */
